@@ -1,0 +1,97 @@
+<div class="card-header bg-transparent border-bottom-0 pt-1 pb-0">
+  <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center">
+    <h1 class="h4">Dashboard</h1>
+    <div class="btn-toolbar mb-2 mb-md-0">
+      <div class="btn-group mr-2">
+        <button class="btn btn-sm btn-outline-secondary" (click)="exportAll()" >Export</button>
+        <button class="btn btn-sm btn-outline-secondary" [disabled]="!(selectedRecords.length > 0)" (click)="exportSelected()">Export Selected</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="card-body border-top-0 py-1">
+  <table class="table table-sm table-responsive" [mfData]="records" #mf="mfDataTable" [mfRowsOnPage]="5">
+    <thead>
+      <tr>
+        <th class="text-center" style="width: 10%">
+          <input type="checkbox" name="all" (change)="selectAll($event, records)" />
+        </th>
+        <th style="width: 10%">#</th>
+        <th class="text-capitalize" style="width: 20%">
+          <mfDefaultSorter by="CreatedBy">Created By</mfDefaultSorter>
+        </th>
+        <th class="text-capitalize" style="width: 20%">
+          <mfDefaultSorter by="birthday">birthday</mfDefaultSorter>
+        </th>
+        <th class="text-capitalize" style="width: 20%">
+          <mfDefaultSorter by="cin">cin</mfDefaultSorter>
+        </th>
+        <th class="text-capitalize" style="width: 20%">
+          <mfDefaultSorter by="city">city</mfDefaultSorter>
+        </th>
+        <th class="text-capitalize" style="width: 20%">
+          <mfDefaultSorter by="clientProspect">clientProspect</mfDefaultSorter>
+        </th>
+        <th class="text-capitalize" style="width: 20%">
+          <mfDefaultSorter by="date">date</mfDefaultSorter>
+        </th>
+        <th class="text-capitalize" style="width: 20%">
+          <mfDefaultSorter by="etape">etape</mfDefaultSorter>
+        </th>
+        <th class="text-capitalize" style="width: 20%">
+          <mfDefaultSorter by="interesse">interesse</mfDefaultSorter>
+        </th>
+        <th class="text-capitalize" style="width: 20%">
+          <mfDefaultSorter by="nomEtPrenom">nomEtPrenom</mfDefaultSorter>
+        </th>
+        <th class="text-capitalize" style="width: 20%">
+          <mfDefaultSorter by="profession">profession</mfDefaultSorter>
+        </th>
+        <th class="text-capitalize" style="width: 20%">
+          <mfDefaultSorter by="responsableEtape">responsableEtape</mfDefaultSorter>
+        </th>
+        <th class="text-capitalize" style="width: 20%">
+          <mfDefaultSorter by="team">team</mfDefaultSorter>
+        </th>
+        <th class="text-capitalize" style="width: 20%">
+          <mfDefaultSorter by="telephone">telephone</mfDefaultSorter>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of mf.data; let i= index">
+          <th class="text-center">
+            <input type="checkbox" id="check{{i+1}}" [checked]="isSelected" (change)="updateSelectList($event, item)">
+          </th>
+          <td>{{i+1}}</td>
+          <td class="text-capitalize">{{item.createdBy}}</td>
+          <td class="text-capitalize">{{item.birthday}}</td>
+          <td class="text-capitalize">{{item.cin}}</td>
+          <td class="text-capitalize">{{item.city}}</td>
+          <td class="text-capitalize">{{item.clientProspect}}</td>
+          <td class="text-capitalize">{{item.date}}</td>
+          <td class="text-capitalize">{{item.etape}}</td>
+          <td class="text-capitalize">{{item.interesse}}</td>
+          <td class="text-capitalize">{{item.nomEtPrenom}}</td>
+          <td class="text-capitalize">{{item.profession}}</td>
+          <td class="text-capitalize">{{item.responsableEtape}}</td>
+          <td class="text-capitalize">{{item.team}}</td>
+          <td class="text-capitalize">{{item.telephone}}</td>
+        </tr>
+        <ngx-spinner
+          bdColor="rgba(51,51,51,0.8)"
+          size="large"
+          color="#fff"
+          type="ball-pulse">
+          <p style="font-size: 20px; color: white">Loading...</p>
+        </ngx-spinner>
+      </tbody>
+    <tfoot>
+      <tr>
+        <td colspan="10">
+          <mfBootstrapPaginator [rowsOnPageSet]="[5,10,25]"></mfBootstrapPaginator>
+        </td>
+      </tr>
+    </tfoot>
+  </table>
+</div>

@@ -1,0 +1,154 @@
+<div class="card-header bg-transparent border-info border-top">
+  <p class="card-title d-inline-block">
+    Populate Option Form
+  </p>
+</div>
+<div class="card-body p-1">
+  <div class="row">
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-header border-top border-primary border-bottom-0">
+          <p class="card-title d-inline-block">Agence Daffectation</p>
+          <a class="btn btn-outline-primary rounded-circle pull-right btn-sm" (click)="addNewField('agence_daffectation')"><i class="fa fa-plus"></i></a>
+        </div>
+        <div class="card-body border-0 p-0">
+          <ul class="list-group">
+            <li class="list-group-item py-1" *ngIf="!(populatedFields?.agence_daffectation.length > 1)">
+              <p class="card-title">No Data found</p>
+            </li>
+            <li class="list-group-item py-1" *ngFor="let agence of populatedFields?.agence_daffectation">
+              <p class="card-title d-inline-block mb-1">{{agence.value}}</p>
+              <button class="btn btn-outline-danger rounded-circle pull-right btn-sm" (click)="removeItem(agence.key, 'agence_daffectation' )"><i class="fa fa-trash"></i></button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-header border-top border-primary border-bottom-0">
+          <p class="card-title d-inline-block">Banque</p>
+          <a class="btn btn-outline-primary rounded-circle pull-right btn-sm" (click)="addNewField('banque')"><i class="fa fa-plus"></i></a>
+        </div>
+        <div class="card-body border-0 p-0">
+          <ul class="list-group">
+            <li class="list-group-item py-1" *ngIf="!(populatedFields?.banque.length > 1)">
+              <p class="card-title">No Data found</p>
+            </li>
+            <li class="list-group-item py-1" *ngFor="let banque of populatedFields?.banque">
+              <p class="card-title d-inline-block mb-1">{{banque.value}}</p>
+              <button class="btn btn-outline-danger rounded-circle pull-right btn-sm" (click)="removeItem(banque.key, 'banque' )"><i class="fa fa-trash"></i></button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-header border-top border-primary border-bottom-0">
+          <p class="card-title d-inline-block">City</p>
+          <a class="btn btn-outline-primary rounded-circle pull-right btn-sm" (click)="addNewField('city')"><i class="fa fa-plus"></i></a>
+        </div>
+        <div class="card-body border-0 p-0">
+          <ul class="list-group">
+            <li class="list-group-item py-1" *ngIf="!(populatedFields?.city.length > 1)">
+              <p class="card-title">No Data found</p>
+            </li>
+            <li class="list-group-item py-1" *ngFor="let city of populatedFields?.city">
+              <p class="card-title d-inline-block mb-1">{{city.value}}</p>
+              <button class="btn btn-outline-danger rounded-circle pull-right btn-sm" (click)="removeItem(city.key, 'city' )"><i class="fa fa-trash"></i></button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-header border-top border-primary border-bottom-0">
+          <p class="card-title d-inline-block">eTap</p>
+          <a class="btn btn-outline-primary rounded-circle pull-right btn-sm" (click)="addNewField('etape')"><i class="fa fa-plus"></i></a>
+        </div>
+        <div class="card-body border-0 p-0">
+          <ul class="list-group">
+            <li class="list-group-item py-1" *ngIf="!(populatedFields?.etape.length > 1)">
+              <p class="card-title">No Data found</p>
+            </li>
+            <li class="list-group-item py-1" *ngFor="let tap of populatedFields?.etape">
+              <p class="card-title d-inline-block mb-1">{{tap.value}}</p>
+              <button class="btn btn-outline-danger rounded-circle pull-right btn-sm" (click)="removeItem(tap.key, 'etape' )"><i class="fa fa-trash"></i></button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-header border-top border-primary border-bottom-0">
+          <p class="card-title d-inline-block">Responsible Etap</p>
+          <a class="btn btn-outline-primary rounded-circle pull-right btn-sm" (click)="addNewField('retap')"><i class="fa fa-plus"></i></a>
+        </div>
+        <div class="card-body border-0 p-0">
+          <ul class="list-group">
+            <li class="list-group-item py-1" *ngIf="!(populatedFields?.responsable_etape.length > 1)">
+              <p class="card-title">No Data found</p>
+            </li>
+            <li class="list-group-item py-1" *ngFor="let retap of populatedFields?.responsable_etape">
+              <p class="card-title d-inline-block mb-1">{{retap.value}}</p>
+              <button class="btn btn-outline-danger rounded-circle pull-right btn-sm" (click)="removeItem(retap.key, 'responsable_etape' )"><i class="fa fa-trash"></i></button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-header border-top border-primary border-bottom-0">
+          <p class="card-title d-inline-block">Teams</p>
+          <a class="btn btn-outline-primary rounded-circle pull-right btn-sm" (click)="addNewTeam('teams')"><i class="fa fa-plus"></i></a>
+        </div>
+        <div class="card-body border-0 p-0">
+          <ul class="list-group">
+            <li class="list-group-item py-1" *ngFor="let team of teamList">
+              <p class="card-title d-inline-block mb-1">{{team.key}}</p>
+              <button class="btn btn-outline-danger rounded-circle pull-right btn-sm" (click)="editTeam(team)"><i class="fa fa-edit"></i></button>
+              <button class="btn btn-outline-danger rounded-circle pull-right btn-sm" (click)="removeItem(team.key, 'teams')"><i class="fa fa-trash"></i></button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<app-modal id="custom-modal-1">
+  <div class="modal">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title text-capitalize" id="exampleModalLabel">{{selectedTeam?.key}}</h5>
+          <button type="button" class="close" (click)="closeModal('custom-modal-1')" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body m-0">
+          <ul class="list-group">
+            <li class="list-group-item py-1" *ngFor="let user of selectedTeam?.users">
+              <p class="card-title d-inline-block mb-1">{{user.value}}</p>
+              <button class="btn btn-outline-danger rounded-circle pull-right btn-sm" (click)="removeUser(user.key, selectedTeam.key)"><i class="fa fa-trash"></i></button>
+            </li>
+          </ul>
+        </div>
+        <div class="card-footer">
+          <div class="form-group row px-5">
+            <input type="text" class="form-control col-md-7" id="email" [(ngModel)]="userName" name="useremail" placeholder="user email">
+            <button class="btn btn-outline-primary pull-right btn-sm offset-md-1 col-md-4" (click)="saveUser(userName, selectedTeam.key)" [disabled]="!!userName">ADD USER</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal-background"></div>
+</app-modal>

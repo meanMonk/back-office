@@ -1,0 +1,130 @@
+{
+  "populate" : {
+    "agence_daffectation" : {
+      "01" : "Agence one",
+      "02" : "Agence two",
+      "03" : "Agence three"
+    },
+    "banque" : {
+      "01" : "banque one",
+      "02" : "banque two",
+      "03" : "banque three"
+    },
+    "city" : {
+      "01" : "London",
+      "02" : "New York",
+      "03" : "Paris",
+      "04" : "Cairo"
+    },
+    "etape" : {
+      "01" : "Etape one",
+      "02" : "Etape two",
+      "03" : "Etape three"
+    },
+    "responsable_etape" : {
+      "01" : "Other one",
+      "02" : "Other two",
+      "03" : "Other three"
+    },
+    "teams" : {
+      "team A" : {
+        "01" : "amirdora@gmail.com",
+        "02" : "user@live.com"
+      },
+      "team B" : {
+        "01" : "digiclack@gmail.com",
+        "02" : "boumlalali@gmail.com"
+      }
+    }
+  },
+  "record" : {
+    "boumlalali@gmail,com" : {
+      "-LN_oV5q8Uc39UVcKI29" : {
+        "birthday" : "29/9/1983",
+        "cin" : "bob",
+        "city" : "London",
+        "clientProspect" : "banque two",
+        "date" : "01/09/2018 15:50",
+        "etape" : "Etape two",
+        "interesse" : "bob",
+        "nomEtPrenom" : "bob",
+        "profession" : "bob",
+        "responsableEtape" : "Other two",
+        "team" : "team B",
+        "telephone" : "00000000"
+      }
+    },
+    "digiclack@gmail,com" : {
+      "-LNW6BramJLcx4qqntjI" : {
+        "birthday" : "11/9/2018",
+        "cin" : "nsjsjs",
+        "city" : "New York",
+        "clientProspect" : "banque two",
+        "date" : "01/09/2018 21:55",
+        "etape" : "Etape two",
+        "interesse" : "nsnsn",
+        "nomEtPrenom" : "nsbsb",
+        "profession" : "jwje",
+        "responsableEtape" : "Other two",
+        "team" : "team B",
+        "telephone" : "949494949"
+      },
+      "-LNWKixVUGZ7xpUs5e6S" : {
+        "birthday" : "11/9/2018",
+        "cin" : "82726ab",
+        "city" : "New York",
+        "clientProspect" : "banque two",
+        "date" : "01/09/2006 17:55",
+        "etape" : "Etape two",
+        "interesse" : "jshshs",
+        "nomEtPrenom" : "name",
+        "profession" : "jajsja",
+        "responsableEtape" : "Other two",
+        "team" : "team B",
+        "telephone" : "646464645"
+      },
+      "-LNX5IkBEEY8-FqTGBDh" : {
+        "birthday" : "29/9/2000",
+        "cin" : "7176Ab",
+        "city" : "New York",
+        "clientProspect" : "Agence two",
+        "date" : "01/09/2018 02:30",
+        "etape" : "Etape three",
+        "interesse" : "soemhs",
+        "nomEtPrenom" : "namebs",
+        "profession" : "dr",
+        "responsableEtape" : "Other two",
+        "team" : "team B",
+        "telephone" : "4994"
+      },
+      "-LNX5J2-ljaaWmd84QLb" : {
+        "birthday" : "29/9/2000",
+        "cin" : "7176Ab",
+        "city" : "New York",
+        "clientProspect" : "Agence two",
+        "date" : "01/09/2018 02:30",
+        "etape" : "Etape three",
+        "interesse" : "soemhs",
+        "nomEtPrenom" : "namebs",
+        "profession" : "dr",
+        "responsableEtape" : "Other two",
+        "team" : "team B",
+        "telephone" : "4994"
+      },
+      "-LNX6fhPQZfdO0etl3qd" : {
+        "birthday" : "29/9/1984",
+        "cin" : "sjh2772",
+        "city" : "New York",
+        "clientProspect" : "banque two",
+        "date" : "01/09/2018 02:35",
+        "etape" : "Etape three",
+        "interesse" : "zjhshs",
+        "nomEtPrenom" : "bxhss",
+        "profession" : "absbs",
+        "responsableEtape" : "Other two",
+        "team" : "team B",
+        "telephone" : "5466464"
+      }
+    }
+  }
+}

@@ -1,0 +1,44 @@
+<nav class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0">
+  <a class="navbar-brand col-sm-2 col-md-1 mr-0" href="javascript:void(0)">Back Office</a>
+  <ul class="navbar-nav px-3">
+    <li class="nav-item text-nowrap">
+      <a class="nav-link" (click)="signOutUser()">Sign out</a>
+    </li>
+  </ul>
+</nav>
+
+<div class="container-fluid">
+  <div class="row">
+    <nav class="d-none d-md-block bg-light sidebar" style="width: 10vw">
+      <div class="sidebar-sticky">
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a class="nav-link active" [routerLink]="['/app']">
+              <span data-feather="home"></span>
+              Dashboard
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/app/populate']">
+              <span data-feather="file"></span>
+              Populate
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="javascript:void(0)">
+              <span data-feather="shopping-cart"></span>
+              Settings
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <main role="main" class="mx-0 pt-3 px-1" style="width: 88vw">
+      <div class="container-fluid px-2">
+        <div class="card">
+          <router-outlet></router-outlet>
+        </div>
+      </div>
+    </main>
+  </div>
+</div>
